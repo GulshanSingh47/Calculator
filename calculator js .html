@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .clci{
+            background-color:#ADD8E6;
+            height: 50vh;
+            width: 30%; text-align: center;
+            margin-left: 30%;
+            margin-top: 9vh; 
+            border: 5px solid black;  display: block;
+            position: absolute;
+            border-radius: 20px 20px;
+            padding-top: 5vh; 
+            font-size: x-large;
+        } 
+       h1{
+position: relative;
+top: 130px;
+left: 450px; 
+color: red;
+       }
+
+       #span{
+        font-size:xx-large;
+        font-weight: bolder;
+        width: 33%;
+        height: 6vh;
+        background-color: aqua;
+        border: 2px solid black;
+        border-radius: 20px 20px 20px 20px;
+    }
+    .but button{
+        font-size:x-large;
+   
+    
+    }
+
+
+
+
+    </style>
+</head>
+<body> 
+    <h1>Calculator</h1><br>
+   <marquee direction="right"><div id="span"> <span>DESIGNED BY GULSHAN</span> </div></marquee>
+
+   <form>
+    <div class="clci">
+    <label><b>Number 1</b></label>
+    <input type="text" placeholder="enter the number" style="background-color:white;" id="num1"><br><br>
+    <label><b>Number 2</b></label>
+    <input type="text" placeholder="enter the number"  style="background-color: white;" id="num2"><br><br>
+   <div class="but"> <button type="button"  style="background-color: cadetblue;" onclick="add()">+</button>
+    <button type="button"  style="background-color: cadetblue;" onclick="min()"><b>-</b></button>
+    <button type="button"  style="background-color: cadetblue;" onclick="mul()"><b>*</b></button>
+    <button type="button"  style="background-color: cadetblue;" onclick="div()"><b>/</b></button>
+    <button type="button"  style="background-color: cadetblue;" onclick="perc()"><b>%</b></button></div> <br><br>
+    <label><b>Result:-</b></label><br><br>
+    <input type="text" placeholder="result"  style="background-color: white;" id="res">
+    </form>
+    <script>
+        function add() {
+            let num1 = parseFloat(document.getElementById("num1").value);
+            let num2 = parseFloat(document.getElementById("num2").value);
+            let sum = num1 + num2
+    document.getElementById("res").value= sum;}
+
+
+    function min() {
+        let num1 = parseFloat(document.getElementById("num1").value)
+        let num2 = parseFloat(document.getElementById("num2").value)
+        let min = num1 - num2
+        document.getElementById("res").value= min;
+    }
+
+    function mul() {
+        let num1 = parseFloat(document.getElementById("num1").value)
+        let num2 = parseFloat(document.getElementById("num2").value)
+        let mul = num1 * num2
+        document.getElementById("res").value= mul;
+    }
+
+    function div() {
+        let num1 = parseFloat(document.getElementById("num1").value)
+        let num2 = parseFloat(document.getElementById("num2").value)
+        let div = num1 / num2
+        document.getElementById("res").value= div;
+    }
+
+    function perc() {
+        let num1 = parseFloat(document.getElementById("num1").value)
+        let num2 = parseFloat(document.getElementById("num2").value)
+        let perc = num1 % num2
+        document.getElementById("res").value= perc;
+    }
+
+
+    </script>
+
+
+
+
+
+
+
+
+
+</div>
+</body>
+</html>
